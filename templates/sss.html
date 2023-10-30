@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sıkça Sorulan Sorular</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      padding: 30px 50px; /* Sağa ve sola doğru genişletme */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333333;
+      margin-bottom: 30px;
+    }
+
+    .faq-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .faq-title img {
+      width: 100px;
+      margin-left: 10px;
+    }
+
+    .faq-item {
+      border: 1px solid #00cccc; /* Cyan kenarlık */
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: #e0fafa; /* Cyan arka plan */
+      transition: all 0.3s;
+    }
+
+    .faq-item:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-question {
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 10px;
+      color: #555555;
+      transition: all 0.3s;
+    }
+
+    .faq-answer {
+      display: none;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      color: #777777;
+    }
+  </style>
+</head>
+<body>
+  <div class="faq-container">
+    <div class="faq-title">
+      <h1>Sıkça Sorulan Sorular</h1>
+      <hr>
+      <img src="https://upload.wikimedia.org/wikipedia/tr/7/74/YSK_logo.png" alt="YSK Logo">
+    </div>
+    <hr>
+
+    <div class="faq-item">
+      <div class="faq-question">Nasıl Üye Olunur?</div>
+      <div class="faq-answer">a</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Nasıl Giriş Yapılır?</div>
+      <div class="faq-answer">Cevap </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Nasıl Oy Kullanılır?</div>
+      <div class="faq-answer">Cevap</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Kimler Oy Kullanamaz?</div>
+      <div class="faq-answer">Cevap </div>
+    </div>
+
+    
+  </div>
+
+  <script>
+    // JavaScript ile soru-cevapların görünmesini ve gizlenmesini sağlayabilirsiniz
+    var faqQuestions = document.getElementsByClassName('faq-question');
+
+    for (var i = 0; i < faqQuestions.length; i++) {
+      faqQuestions[i].addEventListener('click', function() {
+        this.classList.toggle('active');
+        var answer = this.nextElementSibling;
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+        } else {
+          answer.style.display = 'block';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+
+
+
+  
+
+{% endblock body %}

@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<style>
+.adaylar{
+    margin: 25px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 48px;
+}
+.button-39 {
+  background-color: #c52626;
+  border: 1px solid rgb(209,213,219);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-39:hover {
+  background-color: rgb(249,250,251);
+}
+
+.button-39:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-39:focus-visible {
+  box-shadow: none;
+}
+img{
+    border-radius: 50%;
+}
+.bg{
+    background-color: beige;
+}
+.detail-btn{
+    float: right;
+}
+.faq-title img {
+    position: absolute;
+    width: 100px;
+    top: -36px;
+    right: 0px;
+}
+.faq-title{
+    position: relative;
+    margin: 20px;
+}
+.title{
+    margin: 36px;
+}
+</style>
+
+<div class="adaylar">
+    <div class="faq-title">
+    <h2 class="title">ADAYLAR</h2> 
+    <img src="https://upload.wikimedia.org/wikipedia/tr/7/74/YSK_logo.png" alt="YSK Logo">
+    <hr> 
+</div>
+<div class="adaylar bg">
+  <h3 style="text-align:left 10px;">Recep Tayyip Erdoğan</h3>
+    <div style="display:flex; align-items:center;">
+    <img src="data:image/jpeg;base64,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" alt="RTE resim" width="300" height="300"  style="margin-right:10px;">
+    <p style="text-align:right 10px;">Recep Tayyip Erdoğan (d. 26 Şubat 1954; Beyoğlu, İstanbul), Türk siyasetçi, Adalet ve Kalkınma Partisi'nin genel başkanı, Türkiye'nin 12. ve günümüzdeki cumhurbaşkanıdır. 2003-2014 yılları arasında 11 yıl Türkiye başbakanlığı yapan Erdoğan, iki dönemdir Türkiye cumhurbaşkanlığı görevini sürdürmektedir. Cumhurbaşkanını halkın seçmesini onaylayan anayasa değişikliği referandumu sonrasında 2014 yılında gerçekleştirilen seçimle doğrudan halk oyuyla seçilen ilk cumhurbaşkanı olmuştur. 2018 yılında gerçekleştirilen seçimle ikinci defa cumhurbaşkanı seçilmiştir. <br> </p> 
+</div>
+<div class="detail-btn"><a class="button-39" title="Wikipedia" href="https://tr.wikipedia.org/wiki/Recep_Tayyip_Erdo%C4%9Fan" target="_blank">Recep Tayyip Erdoğan Hakkında Daha Fazla Bilgi</a>   
+</div>
+</div>
+
+
+    <div class="adaylar bg">
+      <h3 style="text-align:left 10px;">Kemal Kılıçdaroğlu</h3>
+<div style="display:flex; align-items:center;">
+  <img src="data:image/jpeg;base64,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" width="300" height="300" style="margin-right:10px;">
+  <p style="text-align:right 10px;">Kemal Kılıçdaroğlu (önceki soyadı: Karabulut, d. 17 Aralık 1948; Ballıca, Nazımiye, Tuncel), Türk ekonomist, siyasetçi, bürokrat ve Cumhuriyet Halk Partisinin (CHP) genel başkanıdır. 22 Mayıs 2010 tarihinden beri genel başkanlık görevini sürdürmektedir. 2002-2015 yılları arasında yapılan genel seçimlerde İstanbul 2. Bölge Milletvekili olarak Meclis'e girmiştir. Haziran 2015 ve Kasım 2015 genel seçimlerinde İzmir 2. Bölge Milletvekili olarak tekrar Meclis'e girmiştir. 2018 genel seçimlerinde yine İzmir 2. Bölge Milletvekili olarak meclise girmiştir. 2023 cumhurbaşkanlığı seçiminde Millet İttifakı’nın cumhurbaşkanı adayı olmuştur.<br></p>
+</div>
+<div class="detail-btn"> <a class="button-39" title="Wikipedia" href="https://tr.wikipedia.org/wiki/Kemal_K%C4%B1l%C4%B1%C3%A7daro%C4%9Flu" target="_blank">Kemal Kılıçdaroğlu Hakkında Daha Fazla Bilgi</a></div>
+</div>
+
+<div class="adaylar bg">
+  <h3 style="text-align:left 10px;">Muharrem İnce</h3>
+    <div style="display:flex; align-items:center;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwyPm-IEbp_lB172TmKA-THPck25kFomKIpA&usqp=CAU" alt="RTE resim" width="300" height="300"  style="margin-right:10px;">
+    <p style="text-align:right 10px;">Muharrem İnce (4 Mayıs 1964; Elmalık, Yalova), Türk öğretmen, siyasetçi ve Memleket Partisi genel başkanıdır. 2018 Türkiye cumhurbaşkanlığı seçiminde Cumhuriyet Halk Partisi tarafından Cumhurbaşkanı adayı olarak gösterilmiştir. 2023 Türkiye cumhurbaşkanlığı seçiminde Memleket Partisi tarafından Cumhurbaşkanı adayı olarak gösterilmiştir.
+      2002 ve 2015 yılları arasında yapılan tüm genel seçimlerde CHP Yalova milletvekili olarak meclise giren İnce, iki dönem CHP Grup Başkanvekilliği görevini sürdürmüştür. 2014 Türkiye cumhurbaşkanlığı seçiminin ardından 18 Ağustos 2014 tarihinde gerçekleştirilen 18. Cumhuriyet Halk Partisi Olağanüstü Kurultayı'nda Kemal Kılıçdaroğlu ile yarışmak için grup başkanvekilliği görevinden istifa etmiştir. 2018 Türkiye cumhurbaşkanlığı seçiminde CHP'nin cumhurbaşkanı adayı olmuş ve seçime katılan vatandaşlardan yüzde 30.67'sinin oyunu alarak ikinci olmuştur. <br> </p> 
+</div>
+<div class="detail-btn"><a class="button-39" title="Wikipedia" href="https://tr.wikipedia.org/wiki/Muharrem_%C4%B0nce" target="_blank">Muharrem İnce Hakkında Daha Fazla Bilgi</a>   
+</div>
+</div>
+
+<div class="adaylar bg">
+  <h3 style="text-align:left 10px;">Sinan Oğan</h3>
+    <div style="display:flex; align-items:center;">
+    <img src="https://www.sinanogan.com/wp-content/uploads/2023/04/tv-programlari-5-1.png" alt="RTE resim" width="300" height="300"  style="margin-right:10px;">
+    <p style="text-align:right 10px;">Sinan Oğan (d. 1 Eylül 1967, Melekli, Iğdır), Azerbaycan Türkü kökenli Türk stratejik araştırmacı ve siyasetçidir.2011 Türkiye genel seçimlerinde Milliyetçi Hareket Partisi'nden Iğdır milletvekili seçilerek meclise girdi. 2015 yılında MHP'den ihraç edildi, fakat açtığı davayı kazanarak partiye geri döndü. 2017 yılında üç MHP milletvekili ile birlikte tekrar ihraç edildi. 2023 Türkiye cumhurbaşkanlığı seçimi için ATA İttifakı tarafından aday gösterildi. <br> </p> 
+</div>
+<div class="detail-btn"><a class="button-39" title="Wikipedia" href="https://tr.wikipedia.org/wiki/Sinan_O%C4%9Fan" target="_blank">Sinan Oğan Hakkında Daha Fazla Bilgi</a>   
+</div>
+</div>
+
+</div>
+
+
+
+
+{% endblock body %}
